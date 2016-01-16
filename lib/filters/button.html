@@ -1,0 +1,13 @@
+<template name="TableFiltersButton">
+    <div class="btn-group">
+        {{#each filter.values}}
+            <a href="#" class="btn btn-sm btn-white {{#if isItemActive}}active{{/if}}">
+                {{#if icon}}
+                    <i class="fa fa-{{icon}}"></i>
+                {{/if}}
+
+                {{{label}}}
+            </a>
+        {{/each}}
+    </div>
+</template>

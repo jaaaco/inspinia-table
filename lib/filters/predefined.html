@@ -1,0 +1,21 @@
+<template name="TableFiltersPredefined">
+    <div class="dropdown pull-left">
+        <button class="btn btn-sm btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <i class="fa fa-filter {{#if isActive}}text-info{{/if}}"></i>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            {{#each filter.values}}
+                <li class="{{#if isItemActive}}active{{/if}}"><a href="#">{{{label}}}</a></li>
+            {{/each}}
+            <li role="separator" class="divider"></li>
+            {{#with draftFilter}}
+                <li class="{{#if isItemActive}}active{{/if}}"><a href="#"><i class="fa fa-edit"></i> wpisy robocze</a></li>
+            {{/with}}
+
+            {{#with deletedFilter}}
+                <li class="{{#if isItemActive}}active{{/if}}"><a href="#"><i class="fa fa-trash-o"></i> wpisy usunięte</a></li>
+            {{/with}}
+        </ul>
+    </div>
+</template>

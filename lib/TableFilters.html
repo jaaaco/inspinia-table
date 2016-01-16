@@ -1,0 +1,5 @@
+<template name="TableFilters">
+    {{#each Table.data.filters}}
+        {{> Template.dynamic template=getFilterTemplate data=getData}}
+    {{/each}}
+</template>

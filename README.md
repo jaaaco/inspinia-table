@@ -6,11 +6,10 @@ Install
 Inside your project folder run:
 
 ```
-$ mrt add jaaaco:inspinia-table
+$ meteor add jaaaco:inspinia-table
 ```
 
 Usage
 -----
 
 soon ...
-# inspinia-table
