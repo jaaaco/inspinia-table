@@ -1,0 +1,7 @@
+th.TableSort {
+    cursor: pointer;
+}
+
+th.TableSort.disabled {
+    cursor: default;
+}
