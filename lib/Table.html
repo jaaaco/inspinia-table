@@ -114,7 +114,8 @@
                                 {{#each ../columns}}
                                     <td>
                                         {{#if template}}
-                                            {{> Template.dynamic template=template}}
+
+                                            {{> Template.dynamic template=template data=getColumnData}}
                                         {{else}}
                                             {{{getColumnValue}}}
                                         {{/if}}
