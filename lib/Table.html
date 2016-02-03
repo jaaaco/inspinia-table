@@ -1,10 +1,28 @@
 <template name="Table">
     {{#if inline}}
-        <h5>
-            {{{title}}}
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>
+                    {{#unless hideFilters}}
+                    <div style="display: inline-block; vertical-align: middle">
+                        {{>TableFilters Table=getInstance}}
+                    </div>
+                    {{/unless}}
 
-            {{>TablePagination Table=getInstance}}
-        </h5>
+                    {{{title}}}
+
+                    {{#if filterTitle}}
+                        - {{{filterTitle}}}
+                    {{/if}}
+                </h4>
+            </div>
+            <div class="col-lg-8">
+
+                {{>TablePagination Table=getInstance}}
+            </div>
+        </div>
+
+
 
         <div class="table-responsive">
             <table class="table table-striped table-hover">
@@ -96,7 +114,7 @@
                             <tr>
                                 {{#each columns}}
                                     <th class="TableSort">
-                                        {{label}}
+                                        {{{label}}} {{{name}}}
                                         {{#if _eq sorting 1}}
                                             <i class="fa fa-chevron-up"></i>
                                         {{/if}}
@@ -117,7 +135,11 @@
 
                                             {{> Template.dynamic template=template data=getColumnData}}
                                         {{else}}
-                                            {{{getColumnValue}}}
+                                            {{#if isLink}}
+                                                <a href="#" class="TableColumnLink">{{{getColumnValue}}}</a>
+                                            {{else}}
+                                                {{{getColumnValue}}}
+                                            {{/if}}
                                         {{/if}}
                                     </td>
                                 {{/each}}
