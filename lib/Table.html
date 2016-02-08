@@ -75,9 +75,11 @@
                     </a>
                 {{/each}}
             </div>
+            {{#unless hideSearch}}
             <div class="col-sm-6">
                 <input type="text" value="{{searchQuery}}" placeholder="Szukaj" class="TableSearch input-sm form-control">
             </div>
+            {{/unless}}
         </div>
     {{else}}
         <div class="wrapper wrapper-content animated fadeInLeft">
@@ -100,13 +102,17 @@
                 </div>
                 <div class="ibox-content" style="display: block;">
                     <div class="row">
+                        {{#unless hideFilters}}
                         <div class="col-sm-9">
                             {{>TableFilters Table=getInstance}}
                         </div>
+                        {{/unless}}
 
+                        {{#unless hideSearch}}
                         <div class="col-sm-3">
                             <input type="text" value="{{searchQuery}}" placeholder="Szukaj" class="TableSearch input-sm form-control">
                         </div>
+                        {{/unless}}
                     </div>
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">
