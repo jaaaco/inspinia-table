@@ -140,7 +140,7 @@
                                         {{#if template}}
                                             {{> Template.dynamic template=template data=getColumnData}}
                                         {{else}}
-                                            {{#if isLink}}
+                                            {{#if link}}
                                                 <a href="#" class="TableColumnLink">{{{getColumnValue}}}</a>
                                             {{else}}
                                                 {{{getColumnValue}}}
