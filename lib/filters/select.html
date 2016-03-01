@@ -1,7 +1,7 @@
 <template name="TableFiltersSelect">
     <div class="col-sm-{{getFilterSize}} m-b-xs">
         <select class="input-sm form-control input-s-sm inline">
-            {{#each filter.values}}
+            {{#each filter.values Table}}
                 <option value="{{value}}" selected={{isItemActive}}>{{label}}</option>
             {{/each}}
         </select>

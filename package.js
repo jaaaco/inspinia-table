@@ -1,6 +1,6 @@
 Package.describe({
     name: 'jaaaco:inspinia-table',
-    version: '0.0.15',
+    version: '0.0.16',
     // Brief, one-line summary of the package.
     summary: 'Reactive Tables with pagination, filters and more for Inspinia Admin Template (Bootstrap3)',
     // URL to the Git repository containing the source code for this package.
