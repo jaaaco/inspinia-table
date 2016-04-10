@@ -1,6 +1,6 @@
 Package.describe({
     name: 'jaaaco:inspinia-table',
-    version: '0.0.20',
+    version: '0.0.22',
     // Brief, one-line summary of the package.
     summary: 'Reactive Tables with pagination, filters and more for Inspinia Admin Template (Bootstrap3)',
     // URL to the Git repository containing the source code for this package.
@@ -14,7 +14,7 @@ Package.onUse(function (api) {
     api.versionsFrom('1.2.1');
     api.use('blaze-html-templates','client');
     api.use('ecmascript');
-    api.use('jaaaco:template-logic@0.0.2','client');
+    api.use('jaaaco:template-logic@0.0.3','client');
 
     api.addFiles('lib/Table.html', 'client');
     api.addFiles('lib/Table.js', 'client');
