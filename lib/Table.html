@@ -50,7 +50,7 @@
                 </thead>
                 <tbody>
                 {{#each rows}}
-                    <tr>
+                    <tr {{getRowAttributes}}>
                         {{#each ../columns}}
                             <td>
                                 {{#if template}}
@@ -134,9 +134,9 @@
                             </thead>
                             <tbody>
                             {{#each rows}}
-                            <tr>
+                                <tr {{getRowAttributes}}>
                                 {{#each ../columns}}
-                                    <td {{getRowAttributes}}>
+                                    <td {{getColumnAttributes}}>
                                         {{#if template}}
                                             {{> Template.dynamic template=template data=getColumnData}}
                                         {{else}}
