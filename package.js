@@ -34,7 +34,7 @@ Package.onUse(function (api) {
 
     api.use('blaze-html-templates','client');
     api.use('ecmascript');
-    api.use('ejson')
-    api.use('wfirma:dot','client')
+    api.use('ejson');
+    api.use('wfirma:dot@0.0.2','client');
     api.use('jaaaco:template-logic@0.0.3','client');
 });
